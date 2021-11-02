@@ -1,3 +1,22 @@
+btnLogin.addEventListener("click", Event => {
+    Event.preventDefault();
+    main.classList.add("form-hide")
+});
+
+main.addEventListener("animationstart", Event => {
+    if (Event.animationName = "down") {
+    document.querySelector("form").style.overflow ="hidden" 
+    }
+});
+
+main.addEventListener("animationend", Event => {
+    if (Event.animationName = "down") {
+    main.style.display = "none";
+    document.querySelector("form").style.overflow ="none"
+    }
+});
+
+
 const btnLogin = document.querySelector(".btnLogin")
 const main = document.querySelector("main.container");
 
