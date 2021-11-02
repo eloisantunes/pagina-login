@@ -14,47 +14,44 @@ body{
     background-image: url(../img/backgroundImg.jpg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-form {
     overflow: hidden;
 }
 
-@keyframes move {
+
+@keyframes down {
     from {
-        opacity: 0;
-        transform: translateX(-25%);
+        transform: translateY(0vh);
     }
     to {
-        opacity: 1;
-        transform: translateX(0%);
+        transform: translateY(100vh);
     }
 }
 
-form .input-field:nth-child(1){
-    animation: move 500ms;
+.container{
+    animation: nono 500ms linear, down paused;
+    animation-iteration-count: 2;
 }
 
-form .input-field:nth-child(2){
-    animation: move 400ms;
-    animation-delay: 100ms;
-    animation-fill-mode: backwards ;
-}
-
-form [type='submit']{
-    animation: move 400ms;
-    animation-delay: 250ms;
-    animation-fill-mode: backwards;
+@keyframes nono{
+    100% {
+        transform: translateX(0);
+    }
+    35% {
+        transform: translateX(-15%);
+    }
+    70%{
+        transform: translateX(15%);
+    }
 }
 
 main.container{
     display: flexbox;
     align-items: center;
     justify-content: center;
-    max-width: 450px;
-    min-height: 50vh;
+    max-width: 350px;
+    min-height: 30vh;
     padding: 2rem;
-    margin-top: 200px;
+    margin-top: 25px;
     box-shadow: 5px 5px 15px rgba(58, 58, 58, 0.76);
     border-radius: 8px;
     background-color: white;
@@ -80,6 +77,7 @@ main h2::before{
 form{
     display: flex;
     flex-direction: column;
+    
 }
 
 .input-field{
@@ -140,6 +138,7 @@ form [type='button']{
     background:linear-gradient(to right, slateblue, violet);
     font-size: 1rem;
     font-weight: 400;
+    text-align: center;
     border-radius: 5px;
     transition: all ease;  
 }
@@ -148,6 +147,7 @@ form [type='button']:hover{
     letter-spacing: 0.5px;
     background:linear-gradient(to left, slateblue, violet);
 }
+
 
 .account{
     color: rgba(0, 0, 0, 0.7);
